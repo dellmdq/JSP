@@ -4,7 +4,7 @@
 
 <body>
 
-Testing class calling on jsp: <%= com.dellmdq.jsp.FunUtils.makeItLower("TEST TEST TEST") %>
+Testing class calling on jsp: <%= StringUtils.makeItLower("TEST TEST TEST") %>
 
 
 </body>
