@@ -20,12 +20,12 @@
 <!-- add new item to "To Do" list -->
 <%
 	//get to-do items from the session
-	List<String> items = (List<String>) session.getAttribute("myToDoList");
+	Set<String> items = (Set<String>)session.getAttribute("myToDoSet");
 	
 	//if the TO DO items does not exist, then create a new one
 	if(items == null){
-		items = new ArrayList<String>();
-		session.setAttribute("myToDoList", items);
+		items = new HashSet<String>();
+		session.setAttribute("myToDoSet", items);
 	}
 	//see if there is form data to add
 	String theItem = request.getParameter("theItem");
